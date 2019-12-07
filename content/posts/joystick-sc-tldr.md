@@ -17,9 +17,9 @@ description: >
 
 These configurations are based off my personal setup for **Star Citizen** and are outlined in a
 two part guide on this site. That being said there are a few requirements, and you can use my
-configurations as a starting point whether or not you have the same joystick setup. Below I've provided 
+configurations as a starting point whether or not you have the same joystick setup.
 
-> **Note:** This was last updated for Star Citzen 3.7.2-LIVE.3658647 and may or may not work with the current build
+> **Note:** This was last updated for Star Citizen 3.7.2-LIVE.3658647 and may or may not work with the current build
 
 ## Requirements
 
