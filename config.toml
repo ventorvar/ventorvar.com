@@ -1,0 +1,29 @@
+baseURL = "https://ventorvar.com/"
+languageCode = "en-us"
+title = "Ventorvar Gaming"
+theme = "hello-friend"
+copyright = " "
+paginate = 5
+relativeURLS = true
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+
+[params]
+  subtitle = ""
+  # "light" or "dark"
+  defaultTheme = "dark"
+
+[params.logo]
+  logoText = "ventorvar gaming"
+  # or
+  #
+# path = "/img/your-example-logo.svg"
+# alt = "Your example logo alt text"
+
+[menu]
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about"

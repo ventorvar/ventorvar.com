@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="215959c4-cb99-4c52-bedb-03a8407760d3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/config.toml" beforeDir="false" afterPath="$PROJECT_DIR$/config.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/about.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/about.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/posts/joystick-config.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/posts/joystick-config.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/posts/joystick-intro.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/posts/joystick-intro.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public" beforeDir="false" afterPath="$PROJECT_DIR$/public" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/hello-friend/layouts/_default/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/themes/hello-friend/layouts/_default/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/hello-friend/layouts/_default/single.html" beforeDir="false" afterPath="$PROJECT_DIR$/themes/hello-friend/layouts/_default/single.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/hello-friend/layouts/shortcodes/image.html" beforeDir="false" afterPath="$PROJECT_DIR$/themes/hello-friend/layouts/shortcodes/image.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HugoPluginSettings">
+    <option name="customHugoPath" value="" />
+  </component>
+  <component name="ProjectConfigurationFiles">
+    <option name="files">
+      <list>
+        <option value="$PROJECT_DIR$/.idea/ventorvar.com.iml" />
+        <option value="$PROJECT_DIR$/.idea/misc.xml" />
+        <option value="$PROJECT_DIR$/.idea/modules.xml" />
+        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
+        <option value="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1UfHRb1BMjnl9im3NLvYSvUEVQc" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="autoscrollToSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/content/posts" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="hugo.plugin.settings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\projects\github\ventorvar.com\content\posts" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Hugo Server" type="HUGO_RUN_CONFIGURATION" factoryName="Hugo configuration factory">
+      <option name="hugo.plugin.arguments" value="" />
+      <option name="hugo.plugin.run.server" value="run" />
+      <option name="hugo.plugin.custom.project.dir" value="F:\projects\github\ventorvar.com" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="215959c4-cb99-4c52-bedb-03a8407760d3" name="Default Changelist" comment="" />
+      <created>1560279896681</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1560279896681</updated>
+      <workItem from="1560279909374" duration="975000" />
+      <workItem from="1560280917014" duration="2261000" />
+      <workItem from="1575740724955" duration="36000" />
+      <workItem from="1575740771925" duration="12667000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1084" y="359" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1575740824474">
+      <screen x="0" y="0" width="3440" height="1410" />
+    </state>
+    <state x="1084" y="359" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.3440.1410/3440.-225.1080.1890/-1080.-213.1080.1890@0.0.3440.1410" timestamp="1575740824474" />
+    <state x="1410" y="459" key="FileChooserDialogImpl" timestamp="1575740821899">
+      <screen x="0" y="0" width="3440" height="1410" />
+    </state>
+    <state x="1410" y="459" key="FileChooserDialogImpl/0.0.3440.1410/3440.-225.1080.1890/-1080.-213.1080.1890@0.0.3440.1410" timestamp="1575740821899" />
+    <state width="1524" height="266" key="GridCell.Tab.0.bottom" timestamp="1575757474389">
+      <screen x="0" y="0" width="3440" height="1410" />
+    </state>
+    <state width="1524" height="266" key="GridCell.Tab.0.bottom/0.0.3440.1410/3440.-225.1080.1920/-1080.-213.1080.1920@0.0.3440.1410" timestamp="1575757474389" />
+    <state width="1524" height="266" key="GridCell.Tab.0.center" timestamp="1575757474389">
+      <screen x="0" y="0" width="3440" height="1410" />
+    </state>
+    <state width="1524" height="266" key="GridCell.Tab.0.center/0.0.3440.1410/3440.-225.1080.1920/-1080.-213.1080.1920@0.0.3440.1410" timestamp="1575757474389" />
+    <state width="1524" height="266" key="GridCell.Tab.0.left" timestamp="1575757474389">
+      <screen x="0" y="0" width="3440" height="1410" />
+    </state>
+    <state width="1524" height="266" key="GridCell.Tab.0.left/0.0.3440.1410/3440.-225.1080.1920/-1080.-213.1080.1920@0.0.3440.1410" timestamp="1575757474389" />
+    <state width="1524" height="266" key="GridCell.Tab.0.right" timestamp="1575757474389">
+      <screen x="0" y="0" width="3440" height="1410" />
+    </state>
+    <state width="1524" height="266" key="GridCell.Tab.0.right/0.0.3440.1410/3440.-225.1080.1920/-1080.-213.1080.1920@0.0.3440.1410" timestamp="1575757474389" />
+    <state x="1131" y="347" key="SettingsEditor" timestamp="1575740894461">
+      <screen x="0" y="0" width="3440" height="1410" />
+    </state>
+    <state x="1131" y="347" key="SettingsEditor/0.0.3440.1410/3440.-225.1080.1890/-1080.-213.1080.1890@0.0.3440.1410" timestamp="1575740894461" />
+    <state x="1452" y="425" width="672" height="678" key="search.everywhere.popup" timestamp="1575756427617">
+      <screen x="0" y="0" width="3440" height="1410" />
+    </state>
+    <state x="1452" y="425" width="672" height="678" key="search.everywhere.popup/0.0.3440.1410/3440.-225.1080.1920/-1080.-213.1080.1920@0.0.3440.1410" timestamp="1575756427617" />
+  </component>
+</project>
