@@ -25,6 +25,10 @@ disqusShortname = "ventorvar"
 
 [menu]
   [[menu.main]]
+    identifier = "gallery"
+    name = "Gallery"
+    url = "/gallery"
+  [[menu.main]]
     identifier = "about"
     name = "About"
     url = "/about"
