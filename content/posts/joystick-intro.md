@@ -1,22 +1,27 @@
 ---
 title: "Intro to Advanced Joystick Configs - Part 1"
-date: "2019-12-06"
+date: "2022-07-21"
 author: "ventorvar"
 cover: "https://cdn.discordapp.com/attachments/526695875011936279/534173708302942220/joystick-intro-cover.jpg"
 toc: true
 tags:
-  - Star Citizen
-  - Joystick Gremlin
-  - HOTAS
-  - HOSAS
+- Star Citizen
+- Joystick Gremlin
+- HOTAS
+- HOSAS
+ 
 description: >
   Getting the most out of multiple HID inputs for Star Citizen, part 1. We'll
   take a look at the why and how of configuring multiple joysticks on Windows,
   as well as the walk through how to setup and install the pre-requisite
   software.
+
 ---
 
-> **Just need the configs?** go the to [TL;DR]({{< ref "/posts/joystick-sc-tldr.md" >}}) 
+> **Just need the configs?** For SC head to [TL;DR]({{< ref "/posts/joystick-sc-tldr.md" >}})
+
+> **A note on the update:** If you followed the previous version of this guide, you no longer need HidGuardian! Also
+> Joystick Gremlin no longer needs to run as an administrator.
 
 # The Problem We're Trying to Solve
 
@@ -28,7 +33,7 @@ and the configuration interface has a long way to go before it's not a pain to
 use.
 
 In addition to the difficulties that arise with Windows, each game allows for
-varying levels of controller input configuration that might night suite our
+varying levels of controller input configuration that might suite our
 needs. In Star Citizen's case, it doesn't allow binding multiple inputs to the
 same action, for example, if I wanted to have a **Ship Lights** toggle on my
 throttle as well as my joystick.
@@ -44,13 +49,14 @@ installed, and give you enough understanding of the components to tweak and
 build your own configurations. I'll be supplying my configurations as a quick
 starting off point though.
 
-My setup consists the [Thrustmaster T16000M FCS Flight Pack](https://amzn.com/B01N2PE8CZ) with an additional 
-[Thrustmaster T16000M](https://amzn.com/B01MQEDEEW) giving me:
+My setup consists the [Thrustmaster T16000M FCS Flight Pack](https://amzn.com/B01N2PE8CZ) with an additional
+[Thrustmaster T16000M](https://amzn.com/B01MQEDEEW), as well as two
+[VKB Gladiator Ks](https://vkbcontrollers.com/?product=scg-space-combat-grip-kosmosima-stand-alone) giving me:
 
 - Throttle
 - Pedals
-- Left Joystick
-- Right Joystick
+- Left Joystick (T16K or VKB Gladiator K LH)
+- Right Joystick (T16K or VKB Gladiator K RH)
 
 {{< image src="https://images-na.ssl-images-amazon.com/images/I/91so7Q7rm6L._SL1500_.jpg" >}}
 
@@ -73,8 +79,8 @@ To get started, we need to install a few tools and drivers. We'll only need to
 do these steps once. We'll be using three tools for our setup.
 
 - vJoy
-- HidGuardian
 - Joystick Gremlin
+- HidHide
 
 vJoy is a virtual joystick device for windows that is going to allow the inputs
 from all of our separate physical devices to be mapped to a single virtual
@@ -86,77 +92,51 @@ Just because we're mapping the inputs from our physical devices to vJoy doesn't
 mean that games don't stop seeing the original inputs too. This means that
 you'll have a difficult time guaranteeing that you can get the game to
 only use the vJoy inputs, rather than the device inputs. To solve that issue,
-we're going to use a Windows filter driver called [HidGuardian](https://github.com/ViGEm/HidGuardian) 
-which acts as a sort of firewall, only allowing configured applications to see specific devices.
-
-
-## Install HidGuardian
-
-> **Note:** If HidGuardian does not work well on your system, there is a
-> work around for Star Citizen at least. SC will only see devices that are
-> present when it is launched. Therefore you can launch SC, then attach your
-> devices. You'll still have to make sure they are loaded correctly in JG, 
-> however
-
-The _easiest_ way to install **HidGuardian** is to use [WhiteKnight](https://www.autohotkey.com/boards/viewtopic.php?t=34890) 
-utility. You don't need to follow the directions, just download the tool and follow these:
-
-- Extract **WhiteKnight**
-- Run **AutoWhitelister.exe**
-- Click **Install** next to **HidGuardian Install state:  Not Installed**
-- Close **WhiteKnight**
-
-{{< image src="https://cdn.discordapp.com/attachments/526695875011936279/534163838862491658/whiteknight_install.png" >}}
-
-> **Note:**
-> If you'd rather install this manually, you can follow the instructions on vigem's forums 
-> [here](https://forums.vigem.org/topic/271/hidguardian-v1-driver-installation)
-
+we're going to use a tool called [HidHide](https://github.com/ViGEm/HidHide)
+which acts as a sort of firewall, only allowing configured applications to see
+specific devices.
 
 ## Install vJoy
 
 Installing vJoy is a more straight forward matter:
 
-- Install the latest [vJoy](https://github.com/shauleiz/vJoy) release. Use the [jshafer817](https://github.com/jshafer817/vJoy/releases) branch if you're running the latest version of Windows 10
+- Install the latest [vJoy](https://github.com/shauleiz/vJoy) release. Use the
+  [jshafer817](https://github.com/jshafer817/vJoy/releases) fork if you're running the latest version of Windows 10
 - Run **Configure vJoy** from the Start menu
-  - Make sure the **Enable vJoy** box is checked at the bottom left of the window
-  - vJoy Device 1
-    - Ensure all of the **Axes** boxes are checked
-    - Set **Number of Buttons** to 64
-    - Set **POV Hat Switch** to Continuous, and select **4** for **POVs**
-    - All options in **Force Feedback** should be unchecked
-    - Click Apply
+    - Make sure the **Enable vJoy** box is checked at the bottom left of the window
+    - vJoy Device 1
+        - Ensure all of the **Axes** boxes are checked
+        - Set **Number of Buttons** to 64
+        - Set **POV Hat Switch** to Continuous, and select **4** for **POVs**
+        - All options in **Force Feedback** should be unchecked
+        - Click Apply
 
 {{< image src="https://cdn.discordapp.com/attachments/526695875011936279/534164019246792705/vjoy_config.PNG" >}}
 
 > **Note:** While you can definitely setup multiple vJoy devices, you could run into the same problem of your game not
-> correctly ordering them, so beware.
+> correctly ordering them. So make sure you configure devreorder to preserve the order of the multiple vJoy devices.
+
+## Install HidHide
+
+Find the latest release from https://github.com/ViGEm/HidHide/releases and reboot your computer after installation.
 
 ## Install Joystick Gremlin
 
-- https://whitemagic.github.io/JoystickGremlin/download/
-- Launch **Joystick Gremlin** in admin mode
-- Under the **Tools** menu, click **Options**
-  - Select the **HidGuardian** Tab
-    - Check boxes for each device type you want to use. For my setup, I have a
-    box for **T.16000M** and a box for **TWCS Throttle**
-- Unplug all of your devices
-- Plug your devices back in
+Simply download and install the latest MSI version from: https://whitemagic.github.io/JoystickGremlin/download/
 
-{{< image src="https://cdn.discordapp.com/attachments/526695875011936279/534164216224022542/jg_hidguardian.PNG" >}}
+## Configure HidHide
 
-Because we're using **HidGuardian**, **Joystick Gremlin** must always be run as an
-administrator. To make this easier, we can modify the shortcut so that it will
-always start that way.
+Now that Joystick Gremlin is installed, we need to configure HidHide to allow JG to see the devices, and hide them from
+everything else. To do this launch the `HidHide Configuration Client` from the start menu.
 
-- Open Start and find **Joystick Gremlin**
-- Right-click the shortcut and select **Properties**
-- Select the **Compatibility** tab
-- Check the box for **Run this program as an administrator**
-- Click **Apply** and **OK**
+- On the `Applications` tab, click the `+` button and browse to the `Joystick Gremlin` exe (by default this
+  is `C:\Program Files (x86)\H2ik\Joystick Gremlin\joystick_gremlin.exe`)
 
-> **Note:** If you ever run **Joystick Gremlin** and down see your joysticks,
-> double check that you're running it as an administrator.
+{{< image src="https://cdn.discordapp.com/attachments/652921814321725454/999709699517718608/unknown.png" >}}
+ 
+- On the `Devices` tab, ensure the checkboxes next toy our devices are `checked` and the checkbox for the vJoy devices are `not checked`. Also ensure the `Enable device hiding` checkbox at the bottom is `checked`. If you ever need to disable hiding, you can simply uncheck this box.
+
+{{< image src="https://cdn.discordapp.com/attachments/652921814321725454/999710656129405168/unknown.png" >}}
 
 # Verify Setup
 
@@ -166,14 +146,8 @@ tabs.
 
 {{< image src="https://cdn.discordapp.com/attachments/526695875011936279/534169767406469150/jg_verify.PNG" >}}
 
-Launch the **Set up USB Game Controllers** tool from the Start menu, and you
-should see **vJoy Device**, and none of your joysticks you configured in
-**HidGuardian** tab in **Joystick Gremlin**.
-
-{{< image src="https://cdn.discordapp.com/attachments/526695875011936279/534164342992797696/game_controllers.PNG" >}}
-
 # Configuration Guide
 
-Now that the groundwork is all done. We'll continue the guide in [part 2]({{< ref "/posts/joystick-config.md" >}}).
+Now the groundwork is all done. We'll continue the guide in [part 2]({{< ref "/posts/joystick-config.md" >}}).
 
 > **Need Help? Have an issue/comment?** Feel free to join my Discord: https://discord.gg/CVBMxJq

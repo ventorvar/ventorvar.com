@@ -1,6 +1,6 @@
 ---
 title: "TL;DR - Advanced Joystick Configs for Star Citizen "
-date: "2019-12-07"
+date: "2022-07-21"
 author: "ventorvar"
 cover: "https://cdn.discordapp.com/attachments/652921814321725454/652994492961652747/joystick-sc-tldr-cover.jpg"
 toc: true
@@ -19,11 +19,11 @@ These configurations are based off my personal setup for **Star Citizen** and ar
 two part guide on this site. That being said there are a few requirements, and you can use my
 configurations as a starting point whether or not you have the same joystick setup.
 
-> **Note:** This was last updated for Star Citizen 3.7.2-LIVE.3658647 and may or may not work with the current build
+> **Note:** This was last updated for Star Citizen 3.17.2-PTU.8143480 and may or may not work with the current build
 
 ## Requirements
 
-- vJoy, Joystick Gremlin and HIDGuardian must be installed and setup correctly. Check out 
+- vJoy, Joystick Gremlin and HidHide must be installed and setup correctly. Check out 
   [part 1]({{< ref "/posts/joystick-intro.md" >}}) of the full guide for information
 - Understanding of how Joystick Gremlin works and how to use the advanced controls configurations in Star Citizen,
   otherwise I'd recommend just following the [second part]({{< ref "/posts/joystick-config.md" >}}) to really become 
@@ -31,19 +31,28 @@ configurations as a starting point whether or not you have the same joystick set
   
 # Configurations
 
-- **Google Drawing of key layout:** [here](https://docs.google.com/drawings/d/14IJUqXRCJyYPlzwZPWcJVJUpznWHdLOK20iptyyzc4g/)
-- **SC Control Mapping w/o GameGlass:** [layout_Ventorvar_HOSASAT_37_exported.xml](https://cdn.discordapp.com/attachments/652921814321725454/652990605139640320/layout_Ventorvar_HOSASAT_37_exported.xml)
-- **SC Control Mapping with GameGlass:** [layout_Ventorvar_HOSASAT_37_GG_exported.xml](https://cdn.discordapp.com/attachments/652921814321725454/652990607085797386/layout_Ventorvar_HOSASAT_37_GG_exported.xml)
-- **Joystick Gremlin Profile:** [Ventorvar_SC_37_HOSASAT.xml](https://cdn.discordapp.com/attachments/652921814321725454/652990603302404106/Ventorvar_SC_HOSASAT_37.xml)
+- **Diagram of the key layout:** [here](https://drive.google.com/file/d/1UM4qPccTYAkluSx1fLwBGfNH6mXuxYqS/view?usp=sharing)
+- **SC Control Mapping:** [layout_Ventorvar_HOSAS_3_17_2_exported.xml](https://cdn.discordapp.com/attachments/652921814321725454/999775811257258024/layout_Ventorvar_HOSAS_3_17_2_exported.xml)
+- **Dual Thrustmaster Joystick Gremlin Profile:** [Ventorvar_SC_HOSAS_3.17.2.xml](https://cdn.discordapp.com/attachments/652921814321725454/999775811513102516/Ventorvar_SC_HOSAS_3.17.2.xml)
+
+## Loading the SC Control Mapping
+
+- Place the control mapping into the ```RSI\StarCitizen\LIVE\USER\Client\0\Controls\Mappings``` folder
+- Launch Star Citizen
+- In **Options > KEYBINDINGS > ADVANCED CONTROLS CUSTOMIZATION** menu, use the right arrow in the
+- Click the button on the right that says **> CONTROL PROFILES**
+- Scroll down and choose the new control mapping
+- For each **Joystick** listed on the left side, choose the button next to it that says **None** and change it to **JoyStick**
 
 ## Importing Joystick Gremlin Profile
 
-Importing the Joystick Gremlin profile can be a bit tricky, until I write a plugin to handle the import, this is my recommended method.
+Importing the Joystick Gremlin profile can be a bit tricky, until someone writes a plugin to handle the import, 
+this is my recommended method.
 
 - Start **Joystick Gremlin**
 - Press buttons to determine which joystick is which, and give each device an appropriate **Device Label**
 - Use **Save Profile As** to save the empty profile, call it something like ```GUIDs```
-- Go to your JG folder (```C:\Users\username\joystick gremlin```) and copy the downloaded profile from above into this 
+- Go to your JG folder (```C:\Users\{username}\joystick gremlin```) and copy the downloaded profile from above into this 
   folder next to the ```GUIDs.xml```
 - Open ```GUIDs.xml``` and the new profile in a text editor (like notepad++)
 - In the ```GUIDs.xml``` file you will find a `<device` listing for each of your devices that also shows it's 

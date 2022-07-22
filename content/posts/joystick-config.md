@@ -1,6 +1,6 @@
 ---
 title: "Intro to Advanced Joystick Configs - Part 2"
-date: "2019-12-06"
+date: "2022-07-21"
 author: "ventorvar"
 cover: "https://cdn.discordapp.com/attachments/526695875011936279/534175949562839050/joystick-config-cover.jpg"
 toc: true
@@ -18,7 +18,8 @@ description: >
 > **Note:** This is part 2 of a series. If you haven't already installed all
 > the required tools, go check out [part 1]({{< ref "/posts/joystick-intro.md" >}}) first.
 
-> **Just need the configs?** go the to [TL;DR]({{< ref "/posts/joystick-sc-tldr.md" >}}) 
+> **Just need the configs?** go to the [TL;DR]({{< ref "/posts/joystick-sc-tldr.md" >}}) 
+
 
 # Getting familiar with Joystick Gremlin
 
@@ -49,15 +50,16 @@ joystick buttons within the game.
 ## Planning it out
 
 Before we start configuring JG and Star Citizen, it's good to come up with a
-plan. One of the easiest ways I've found is to use Drawings in Google Docs.
+plan. One of the easiest ways I've found is to use Diagrams.net
 
-{{< image src="https://cdn.discordapp.com/attachments/652921814321725454/652995104109494274/joystick_drawing.jpg" link="true">}}
+{{< image src="https://cdn.discordapp.com/attachments/652921814321725454/999782115350679684/unknown.png" link="true">}}
 
-You can copy mine from [here](https://docs.google.com/drawings/d/14IJUqXRCJyYPlzwZPWcJVJUpznWHdLOK20iptyyzc4g/). 
-I label the physical input with the in-game action on top, and the keyboard or joystick input on
+You can copy mine from [here](https://drive.google.com/file/d/1UM4qPccTYAkluSx1fLwBGfNH6mXuxYqS/view?usp=sharing), and
+edit it with [Diagrams.net](https://app.diagrams.net).
+I label the physical input with the in-game action on top, and the keyboard or joystick output on
 the bottom. As you can see, most of my inputs map to keyboard commands, with only a few joystick buttons 
-(J1, J2, J3, etc). It's also useful to have a the [in-game keyboard map](https://cdn.discordapp.com/attachments/652921814321725454/652922995341393950/SC3_7_2_KeyMappings_v1.pdf)[^2]
-handy when creating this.
+(J1, J2, J3, etc). It's also useful to have the [action map](https://docs.google.com/spreadsheets/d/15UHroq8xVSAH-AcX9hXS_D6w74RYP2TQQAsZTPlbSO0/edit?usp=sharing)
+handy when creating your configuration.
 
 # Joystick Gremlin Configuration
 
@@ -109,10 +111,15 @@ mapping:
 
 ### Testing it out
 
-To test our configuration, open the **Monitor vJoy** application. Ensure to
-**activate** JG by clicking the **activate** button which turns it green. Now
-when you move your left and right joysticks, you should see the corresponding
+To test our configuration, open the **Monitor vJoy** application. Ensure to **activate** JG by clicking the **activate** 
+button which turns it green. You should also see `Status: Running and Active` in the bottom left of the JG window.
+
+{{< image src="https://cdn.discordapp.com/attachments/652921814321725454/999784916776669214/unknown.png" link="true">}}
+
+Now when you move your left and right joysticks, you should see the corresponding
 axis move in the vJoy monitor.
+
+{{< image src="https://cdn.discordapp.com/attachments/652921814321725454/999785235761877032/unknown.png" link="true">}}
 
 ### Inverting axes
 
@@ -167,18 +174,15 @@ the right stick), this would use the **remap** action.
 If we're mapping a physical input to a keyboard command, then we use the **map
 to keyboard** action.
 
-- Find the **Gimbal Lock** button on the left joystick by physically pressing
+- Find the **Gimbal Mode** button on the left joystick by physically pressing
   the bottom right-most button on the right side buttong group while the **Left** joystick tab is selected (Button 10)
 - Select the **Map to Keyboard** action and click **Add**
 - Press the **Record keys** button in the **Map to Keyboard** form
-- Press **Left Alt + R** on your keyboard and release
+- Press **G** on your keyboard and release
 
 {{< image src="https://cdn.discordapp.com/attachments/526695875011936279/534246929622892555/jg_gimbal_lock.PNG" link="true">}}
 
-Continue this process for every physical button you'd like to configure. For
-Star Citizen (3.4), you can use [this](https://imgur.com/a/v4eofhx) as a good
-reference. However, key bindings change frequently and I'd advise you try to
-find a current version of the advanced key bindings.
+Continue this process for every physical button you'd like to configure. 
 
 # Configuring Star Citizen
 
@@ -208,7 +212,7 @@ in-game equivalents.
 
 ## Configuring Joystick Inputs
 
-Still in the **ADVANCED CONTROLS CUSTOMIZATION** UI, use the right arrow in the
+In **Options > KEYBINDINGS > ADVANCED CONTROLS CUSTOMIZATION** menu, use the right arrow in the
 bottom right button that currently says **Keyboard / Mouse** to select
 **Joystick / HOTAS**. None of the built-in control profiles match our purpose,
 so we're going to completely clear the joystick configuration, and configure
@@ -218,7 +222,10 @@ button.
 
 - Click the button on the right that says **> CONTROL PROFILES**
 - Scroll down and choose **Clear All Device Bindings**
-- For each **Joystick** listed on the left side, choose the button next to it that says **None** and change it to **JoyStick** 
+- For each **Joystick** listed on the left side, choose the button next to it that says **None** and change it to **JoyStick**
+
+> **Note:** Sometimes the clear all device bindings profile doesn't actually clear everything. Make sure to go through
+> each category and ensure that all device bindings are cleared, or set to your liking.
 
 Now that the controls are cleared, we must assign certain bindings using the following table. Do this by clicking on 
 the item twice, then moving the joystick in the desired axis, or pressing the intended button. Use your joystick 
@@ -226,46 +233,42 @@ configuration map for a reference.
 
 > **Note:** You will get a message that things have already been bound and if that's ok. Always press yes.
 
-| Group                     | Action                                 | Binding         |
-| ------------------------- | -------------------------------------- | --------------- |
-| Flight - View             | Look left / right                      | Z-Axis          |
-|                           | Look up / down                         | Y-Axis          |
-|                           | Look Behind                            | Button 19       |
-| Flight - Movement         | Pitch                                  | Y-Axis          |
-|                           | Yaw                                    | Z-Axis          |
-|                           | Roll                                   | X-Axis          |
-|                           | Speed Limiter (Abs.)                   | Slider 1        |
-|                           | Acceleration Limiter (Abs.)            | Slider 2 (Dial) |
-|                           | Strafe up / down                       | Z-Axis Rotation |
-|                           | Strafe left / right                    | Y-Axis Rotation |
-|                           | Throttle forward / back                | X-Axis Rotation |
-|                           | G-force safety (Toggle)                | Button 30       |
-| Flight - Targeting        | Aim left / right                       | X-Axis          |
-|                           | Aim up / down                          | Y-Axis          |
-|                           | Scanning Radar Ping                    | Button 1        |
-|                           | Scanning Increase Radar Angle          | Button 3        |
-|                           | Scanning Decrease Radar Angle          | Button 2        |
-| Mining                    | Fire Mining Laster (Toggle)            | Button 1        |
-|                           | Switch Mining Laser (Toggle)           | Button 2        |
-|                           | Increase / Decrease Mining Laser Power | Slider 2        |
-| Flight - Turrets          | Aim left / right                       | X-Axis          |
-|                           | Aim up / down                          | Y-Axis          |
-| Flight - Weapons          | Fire Weapon Group 1                    | Button 1        |
-|                           | Fire Weapon Group 2                    | Button 3        |
-|                           | Acquire missile lock                   | Button 2        |
-|                           | Launch missile                         | Button 2        |
-| Ground Vehicle - General  | Look left / right                      | X-Axis          |
-|                           | Look up / down                         | Y-Axis          |
-|                           | Look behind                            | Button 19       |
-|                           | Fire Weapon Group 1                    | Button 1        |
-|                           | Fire Weapon Group 2                    | Button 3        |
-| Ground Vehicle - Movement | Drive Forward / Backward               | Y-Axis          |
-|                           | Turn Left / Right                      | Z-Axis          |
-|                           | Primary Fire                           | Button 1        |
-|                           | Secondary Fire                         | Button 3        |
-| Ground Vehicle - Gunner   | Primary Fire                           | Button 1        |
-|                           | Secondary Fire                         | Button 3        |
-| Social - General          | Re-spawn                               | Button 1        |
+| Group                               | Action                                 | Binding         |
+|-------------------------------------|----------------------------------------|-----------------|
+| Vehicles - Seats and operator Modes | Look Behind                            | Button 19       |
+| Vehicles - Cockpit                  | Open All Doors                         | Button 27       |
+|                                     | Close All Doors                        | Button 29       |
+| Vehicles - View                     | Look left / right                      | Z-Axis          |
+|                                     | Look up / down                         | Y-Axis          |
+| Flight - Movement                   | Pitch                                  | Y-Axis          |
+|                                     | Yaw                                    | Z-Axis          |
+|                                     | Roll                                   | X-Axis          |
+|                                     | Strafe up / down                       | Z-Axis Rotation |
+|                                     | Strafe left / right                    | Y-Axis Rotation |
+|                                     | Throttle forward / back                | X-Axis Rotation |
+|                                     | Speed Limiter (Abs.)                   | Slider 1        |
+|                                     | Acceleration Limiter Up / Down (Abs.)  | Slider 2 (Dial) |
+|                                     | G-force safety (Toggle)                | Button 30       |
+| Vehicles - Mining                   | Fire Mining Laster (Toggle)            | Button 1        |
+|                                     | Switch Mining Laser (Toggle)           | Button 2        |
+|                                     | Increase / Decrease Mining Laser Power | Slider 2 (Dial) |
+| Turret - Movement                   | Pitch                                  | Y-Axis          |
+|                                     | Yaw                                    | X-Axis          |
+| Vehicle - Weapons                   | Fire Weapon Group 1                    | Button 1        |
+|                                     | Fire Weapon Group 2                    | Button 3        |
+| Vehicle - Missiles                  | Launch Missiles (Tap)                  | Button 1        |
+|                                     | Cycle Next Missile Type                | Button 3        |
+| Ground Vehicle - General            | Look left / right                      | X-Axis          |
+|                                     | Look up / down                         | Y-Axis          |
+|                                     | Look behind                            | Button 19       |
+|                                     | Fire Weapon Group 1                    | Button 1        |
+|                                     | Fire Weapon Group 2                    | Button 3        |
+|                                     | Open All Doors                         | Button 27       |
+|                                     | Close All Doors                        | Button 29       |
+| Ground Vehicle - Movement           | Drive Forward / Backward               | X-Axis Rotation |
+|                                     | Turn Left / Right                      | Z-Axis          |
+|                                     | Pitch Up /Down                         | Y-Axis          |
+| Social - General                    | Re-spawn                               | Button 1        |
 
 ## Saving the Configuration for Later Use
 
@@ -278,10 +281,10 @@ reload later. At the main menu:
 - Click 'Save Control Settings'
 - Enter a name for your control setup, and click **Save**
 - Copy the control settings profile from the
-  ```RSI\StarCitizen\LIVE\USER\Controls\Mappings``` folder.
+  ```RSI\StarCitizen\LIVE\USER\Client\0\Controls\Mappings``` folder.
 
 Whenever you need to delete your **USER** folder, simply copy the
-**layout_*_exported.yml** back into the ```USER\Controls\Mappings``` folder and
+**layout_*_exported.yml** back into the ```USER\Client\0\Controls\Mappings``` folder and
 use the **CONTROL PROFILES** button in Star Citizen like you did to load the
 advanced keyboard controls above.
 
@@ -289,7 +292,7 @@ advanced keyboard controls above.
 
 ## Advanced Axis Curves
 
-In my configuration, I use a custome response curve for the **Speed Limiter** axis (Z-Axis on the Throttle 
+In my configuration, I use a custom response curve for the **Speed Limiter** axis (Z-Axis on the Throttle 
 mapped to Slider) so that I can have more precise control over the lower 1/8th of the limiter region. This is done the
 same way we inverted the axes above, except we configure it at as **Cubic Bezier Spline** curve and use the control 
 points to adjust the response curve to our liking. This is very much personal preference, but you can see what I've
@@ -305,7 +308,6 @@ future guide we'll cover creating custom modes for mining, a director mode and a
 precision mode for dogfighting that will give us better accuracy while firing weapons.
 
 [^1]: https://en.wikipedia.org/wiki/Axes_conventions#Frames_for_space_navigation
-[^2]: https://www.reddit.com/r/starcitizen/comments/e0zrde/sc_372_keyboard_mouse_gamepad_and_joystick/
 
 
 > **Need Help? Have an issue/comment?** Feel free to join my Discord: https://discord.gg/CVBMxJq
